@@ -11,6 +11,29 @@ const tutorials = [
   'what is JSONP?'
 ];
 
+// titleCased(): returns an array with title case tutorial names. Note that this function takes no arguments and should use the global tutorials variable as data.
+
+// function titleCase(str) {
+//   return str.toLowerCase().split(' ').map(function(word) {
+//     return (word.charAt(0).toUpperCase() + word.slice(1));
+//   }).join(' ');
+// }
+// titleCase("I'm a little tea pot");
+
+//original somewhat working code
+// const titleCased = () => {
+//   return tutorials.map((array) => {
+//     const firstArray = array.split(' ')
+//     const secondArray = firstArray.map((string) => string.charAt(0).toUpperCase() + string.slice(1).toLowerCase())
+//     return secondArray.join(' ')
+//   })
+// }
+
+
 const titleCased = () => {
-  return tutorials
+  return tutorials.map((array) => {
+    const firstArray = array.split(' ')
+    const secondArray = firstArray.map((string) => string.charAt(0).toUpperCase() + string.slice(1))
+    return secondArray.join(' ')
+  })
 }
